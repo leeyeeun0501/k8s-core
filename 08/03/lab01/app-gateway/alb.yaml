@@ -21,7 +21,7 @@ apiVersion: gateway.networking.k8s.io/v1
 kind: Gateway
 metadata:
   name: app
-  namespace: gallery
+  namespace: lab01
 spec:
   gatewayClassName: alb
   infrastructure:
