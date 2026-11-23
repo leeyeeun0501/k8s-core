@@ -34,7 +34,8 @@ spec:
 
       initContainers:
       - name: wait-db
-        image: busybox:1.37
+        # image: busybox:1.37
+        image: 632154834836.dkr.ecr.ap-northeast-2.amazonaws.com/gallery:1.0
         command: ["sh", "-c"]
         args:
         - until nc -z -w 2 db.gallery.svc.cluster.local 3306; do echo "$(date +%T) waiting for db.gallery.svc.cluster.local:3306"; sleep 3; done; echo "$(date +%T) db.gallery.svc.cluster.local:3306 is ready"
