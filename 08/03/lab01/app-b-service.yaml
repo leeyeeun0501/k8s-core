@@ -4,6 +4,7 @@ metadata:
   name: app-b
   namespace: lab01
 spec:
+  type: ClusterIP
   selector:
     app: app-b
   ports:

@@ -5,12 +5,12 @@ metadata:
   namespace: lab02
 spec:
   parentRefs:
-  - name: gw
+  - name: app
   rules:
   - backendRefs:
     - name: app-v1
       port: 80
-      weight: 0
+      weight: 100
     - name: app-v2
       port: 80
-      weight: 100
+      weight: 0

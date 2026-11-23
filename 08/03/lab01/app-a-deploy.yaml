@@ -4,7 +4,7 @@ metadata:
   name: app-a
   namespace: lab01
 spec:
-  replicas: 2 # 3개에서 2개로 변경
+  replicas: 2
   selector:
     matchLabels:
       app: app-a
