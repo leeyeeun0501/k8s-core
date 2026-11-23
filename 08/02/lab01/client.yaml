@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: client
+  namespace: lab01
+  annotations:
+    # service.beta.kubernetes.io/aws-load-balancer-scheme: internal
+    service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
+  labels:
+    app: client
+spec:
+  containers:
+  - name: netshoot
+    image: nicolaka/netshoot:v0.15
+    command: ["sleep", "infinity"]

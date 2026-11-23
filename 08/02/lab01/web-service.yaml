@@ -3,6 +3,9 @@ kind: Service
 metadata:
   name: web
   namespace: lab01
+  annotations:
+    # service.beta.kubernetes.io/aws-load-balancer-scheme: internal
+    service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
 spec:
 # type: ClusterIP
 # type: NodePort
