@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: crash-loop
+  namespace: lab01
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: busybox
+    image: busybox:1.38
+    command: ["sh", "-c", "echo config not found; exit 1"]

@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: infinite-worker
+  namespace: lab01
+spec:
+  containers:
+  - name: infinite-worker
+    image: dkrcore/infinite-worker:1.0

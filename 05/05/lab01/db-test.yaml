@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db-test
+  namespace: lab01
+spec:
+  containers:
+  - name: wait-db
+    image: busybox:1.37
+    command: ["sh", "-c", "until nslookup db.lab01.svc.cluster.local; do echo waiting for lab01-db-svc; sleep 2; done"]
